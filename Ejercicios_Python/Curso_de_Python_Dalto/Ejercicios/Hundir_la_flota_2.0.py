@@ -39,6 +39,13 @@ def comprueba_posicion_tiene_X(posicion):
         else:
             return 0 #No tiene X
         
+def comprueba_posicion_tiene_X_player(posicion):
+    if posicion in tablero_player:
+        if tablero_player[posicion] == "X":
+            return 1 #tiene X
+        else:
+            return 0 #No tiene X
+        
 def comprueba_posc_alrededor(posicion):
     posicion_izq = posicion - 1
     posicion_der = posicion +1
@@ -169,31 +176,28 @@ def imprimir_tablero_player():
     print("   A   B   C   D   E   F   G")
 
 
-def comprobar_barco_hundido_horizontal(posicion):
-    pos_derch = posicion + 1
-    pos_izquierd = posicion - 1
-    if posicion in tablero:
-        if pos_derch != tablero[8] and pos_derch != tablero[15] and pos_derch != tablero[22] and pos_derch != tablero[29] and pos_derch != tablero[36]:
-            if (comprueba_posicion_tiene_X(posicion) == 1 and comprueba_posicion_tiene_X(pos_izquierd) == 1 and 
-                comprueba_posicion_tiene_X(pos_derch) == 0) or (comprueba_posicion_tiene_X(posicion) == 1 and 
-                                                                comprueba_posicion_tiene_X(posicion -1) == 0 and 
-                                                                comprueba_posicion_tiene_X(posicion +1) == 1):
-                return 1
-            else:
-                return 0
-        else:
-           return 0
+def comprobar_barco_hundido(posicion, tablero):
+    # Check horizontal
+    for i in range(-1, 2):
+        pos = posicion + i
+        if pos < 1 or pos > 42:
+            continue
+        if tablero[pos]!= "X":
+            break
+    else:
+        return 1
 
-def comprobar_barco_hundido_vertical(posicion):
-    if posicion in tablero:
-        if comprueba_posicion_tiene_X(posicion) == 1: 
-            if  comprueba_posicion_tiene_X(posicion -7) == 1 and comprueba_posicion_tiene_X(posicion +7) == 0:
-                return 1 
-            elif comprueba_posicion_tiene_X(posicion -7) == 0 and comprueba_posicion_tiene_X(posicion +7) == 1:
-                return 1
-        else:
-            return 0
-    
+    # Check vertical
+    for i in range(-7, 8, 7):
+        pos = posicion + i
+        if pos < 1 or pos > 42:
+            continue
+        if tablero[pos]!= "X":
+            break
+    else:
+        return 1
+
+    return 0
     
 
 print("-------------------------------")
@@ -216,10 +220,10 @@ while cont_player < 15:
         if 1 <= posicion <= 42 and comprueba_posicion_tiene_X(posicion) == 1:
             tablero_player[posicion] = "X"
             cont_player += 1 
-            if comprobar_barco_hundido_horizontal(posicion) == 1:
+            if comprobar_barco_hundido(posicion,tablero) == 1 and comprobar_barco_hundido(posicion,tablero_player) == 1:
                 mensaje1 = ("+++ BARCO HUNDIDO  AAAAAAAAAAAAAA+++")
-            elif comprobar_barco_hundido_vertical(posicion) == 1:
-                mensaje1 = ("+++ BARCO HUNDIDO BBBBBBBBBBBBBBB+++")
+            else:
+                print("sigue")
             
         else:
             tablero_player[posicion] = "O"

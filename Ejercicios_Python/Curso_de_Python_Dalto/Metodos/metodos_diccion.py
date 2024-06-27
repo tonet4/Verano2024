@@ -22,3 +22,6 @@ print(diccionario)
 #obteniendo un elemento dict_items iterable
 diccionario_iterable = diccionario.items()
 print(diccionario)
+
+
+
