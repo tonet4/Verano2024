@@ -1,0 +1,43 @@
+
+
+body {
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    /*Con el display y el place-items se pone en centro todo el texto*/
+    display: grid;
+    place-items: center;
+  }
+
+
+.fondo_botones {
+    background-color: rgb(249, 249, 186);
+}
+
+button {
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    width: 50px;
+    height: 50px;
+    font-size: 24px;
+    
+
+}
+
+.calculadora {
+    background-color: rgb(194, 248, 248);
+    padding: 1.5rem;
+    border-radius: 1rem;
+
+}
+
+.pantalla {
+    width: 200px;
+    height: 30px;
+    font-size: 24px;
+    text-align: right;
+    padding: 10px;
+    border: 1px solid #d30a0a;
+    margin-bottom: 1rem;
+  }
+
+  button:hover {
+    background-color: #f5b4b4;
+  }

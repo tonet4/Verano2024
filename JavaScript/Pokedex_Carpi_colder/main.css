@@ -1,0 +1,317 @@
+/*Importa una fuente, para el texto*/
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800;900&display=swap');
+
+
+
+/*Con esto lo que hace es asignar una serie de colores para todo el proyecto, como pueden ser para las letras, el fondo o el tipo de pokemon*/
+:root {
+    --clr-black: #1c1c1c;
+    --clr-gray: #ececec;
+    --clr-white: #f7f7f7;
+
+    --type-normal: #A8A878;
+    --type-fire: #F08030;
+    --type-water: #6890F0;
+    --type-grass: #78C850;
+    --type-electric: #F8D030;
+    --type-ice: #98D8D8;
+    --type-fighting: #C03028;
+    --type-poison: #A040A0;
+    --type-ground: #E0C068;
+    --type-flying: #A890F0;
+    --type-psychic: #F85888;
+    --type-bug: #A8B820;
+    --type-rock: #B8A038;
+    --type-ghost: #705898;
+    --type-dark: #705848;
+    --type-dragon: #7038F8;
+    --type-steel: #B8B8D0;
+    --type-fairy: #F0B6BC; 
+
+}
+
+/* el del * significa que es para todos los elementos de la página
+
+    box-sizing se refiere a la forma en que se calcula el ancho y alto de un elemento.
+    El valor border-box indica que el ancho y alto de un elemento incluyen el borde y 
+    el padding, pero no el margen. Esto significa que si se establece un ancho y alto 
+    para un elemento, se tomarán en cuenta el borde y el padding al calcular el tamaño total del elemento.
+*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: var(--clr-black); /*El valor var(--clr-black) indica que se utilizará la variable --clr-black definida en la sección :root para establecer el color del texto*/
+    font-family: 'Rubik', sans-serif;
+}
+
+/* La lista del encabezado, para que no tenga ningun tipo de marca delante, como un punto*/
+ul {
+    list-style-type: none;
+}
+
+button {
+    background-color: transparent;
+    border: 0;
+    border-radius: 0;
+}
+
+
+body {
+    min-height: 100vh;
+    background-color: var(--clr-gray);
+}
+
+header {
+    padding-block: 1rem; /* este padding incluye el bottom y top*/
+    box-shadow: 0 0 2rem -1rem rgba(0, 0, 0, 0.5); /*para darle sombra*/
+    
+}
+
+.nav {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: flex-start;
+    padding-inline: 2rem;
+    max-width: 1000px; /* esto es para que cuando se haga grande tenga un margen en los lados, esto es responsiv*/
+    margin: 0 auto; /*esto hace que quede centrado siempre*/
+}
+
+
+.nav-list {
+    display: flex; /* para que se centren uno al lado del otro*/
+    align-items: center;
+    flex-wrap: wrap; /*para si sobresalen que no se vayan para bajo*/
+    gap: .5rem; /*para separarlos un poco*/
+
+}
+
+
+.btn-header {
+    background-color: var(--type-normal);
+    padding: .5rem;
+    border-radius: 100vmax;
+    cursor: pointer;
+    text-transform: uppercase; /*esto es para que este todo en mayusculas*/
+    font-weight: 600;/*grueso letra*/
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.25); /*para darle sombra*/
+    transition: 0.2s;
+}
+
+.btn-header:hover {
+    transform: scale(1.1); /*para que se agrande al pasar el cursor*/
+    box-shadow: 0 0 2rem rgba(0, 0, 0, 0.25);
+}
+
+main {
+    padding: 2rem;
+    max-width: 1000px; /* esto es para que cuando se haga grande tenga un margen en los lados, esto es responsiv*/
+    margin: 0 auto; /*esto hace que quede centrado siempre*/
+}
+
+
+/*CSS CARTAS POKEMON*/
+
+.pokemon-todos {
+    display: grid; /*para tener tres columnas*/
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1rem; /*para separarlos entre si*/
+
+}
+
+.pokemon {
+    border-radius: 1rem;
+    background-color: var(--clr-white);
+    box-shadow: 0 0 3rem -1rem rgba(0, 0, 0, 0.25);
+    padding-block: 1rem;
+    text-transform: uppercase;
+    position: relative; /*hace que este por encima del id-back*/
+    isolation: isolate; /*esto se pone para que el numero que sale detras de la imagen con el z-index no se vaya mas atras de este punto*/
+    overflow: hidden;
+}
+
+.pokemon-id-back {
+    position: absolute; /*hace que se quede por debajo de la imagen*/
+    top: 1rem;
+    left: 50%;
+    transform: translateX(-50%); /* truco para centrar el numero*/
+    font-size: 6rem;
+    font-weight: 800;
+    color: var(--clr-gray);
+    z-index: -1; /*se tiene que poner en donde no quieres que pase un isolation, en este caso seria "pokemon"*/
+}
+
+.pokemon-imagen {
+    padding-inline: 1rem; 
+    display: flex;
+    justify-content: center;
+}
+
+.pokemon-imagen img {
+    width: 100%;
+    max-width: 6rem;
+}
+
+.pokemon-info {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem; /*espacio entre nombre del pokemon y tipo*/
+    padding-inline: 1rem; /*espacio de los dos lados*/
+    align-items: center; /*alinea todo al centro*/
+    text-align: center;
+}
+
+.nombre-contenedor {
+    /*aqui lo que hacemos es que el número de pokemon este al lado de el nombre pero si hacemos pequeña la pantalla se uede alineado arriba del nombre*/
+    display: flex;
+    align-items: center;
+    column-gap: .5rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.pokemon-id {
+    background-color: var(--clr-gray);
+    padding: .25rem .5rem;
+    border-radius: 100vmax;
+    font-size: .75rem;
+    font-weight: 500;
+}
+
+.pokemon-nombre {
+    font-size: 1.4rem;
+}
+
+.pokemon-tipos {
+    display: flex;
+    gap: .5rem;
+    font-size: .75rem;
+    font-weight: 500;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.tipo {
+    padding: .25rem .5rem;
+    border-radius: 100vmax;
+}
+
+.pokemon-stats {
+    display: flex;
+    gap: 1rem;
+    font-size: .85rem;
+}
+
+.stat {
+    background-color: var(--clr-gray);
+    color: var(--clr-black);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.normal {
+    background-color: var(--type-normal);
+    color: var(--clr-black);
+}
+
+.fire {
+    background-color: var(--type-fire);
+    color: var(--clr-black);
+}
+
+.water {
+    background-color: var(--type-water);
+    color: var(--clr-black);
+}
+
+.grass {
+    background-color: var(--type-grass);
+    color: var(--clr-black);
+}
+
+.electric {
+    background-color: var(--type-electric);
+    color: var(--clr-black);
+}
+    
+.ice {
+    background-color: var(--type-ice);
+    color: var(--clr-black);
+}
+
+.fighting {
+    background-color: var(--type-fighting);
+    color: var(--clr-black);
+}
+
+.poison {
+    background-color: var(--type-poison);
+    color: var(--clr-black);
+}
+
+.ground {
+    background-color: var(--type-ground);
+    color: var(--clr-black);
+}
+
+.flying {
+    background-color: var(--type-flying);
+    color: var(--clr-black);
+}
+
+.psychic {
+    background-color: var(--type-psychic);
+    color: var(--clr-black);
+}
+
+.bug {
+    background-color: var(--type-bug);
+    color: var(--clr-black);
+}
+
+.rock {
+    background-color: var(--type-rock);
+    color: var(--clr-black);
+}
+
+.ghost {
+    background-color: var(--type-ghost);
+    color: var(--clr-black);
+}
+
+.dark {
+    background-color: var(--type-dark);
+    color: var(--clr-black);
+}
+    
+.dragon {
+    background-color: var(--type-dragon);
+    color: var(--clr-black);
+}
+
+.steel {
+    background-color: var(--type-fire);
+    color: var(--clr-black);
+}
+
+.fairy {
+    background-color: var(--type-fairy);
+    color: var(--clr-black);
+}

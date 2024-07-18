@@ -1,0 +1,191 @@
+<!--https://www.youtube.com/watch?v=EmxvMPcIy5c&t=2s
+Para hacer este ejercicio necesitas apollo de la pagina web pokemonapi
+
+-->
+
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokedex</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <header> <!--El header se utiliza para marcar el encabezado de la página-->
+        <nav class="nav">
+            <img src="./imagenes/logo.png" alt="Logo Pokedex">
+            <ul class="nav-list">
+                <li class="nav-item"><button class="btn btn-header" id="ver-todos">Ver todos</button></li>
+                <li class="nav-item"><button class="btn btn-header normal" id="normal">Normal</button></li>
+                <li class="nav-item"><button class="btn btn-header fire" id="fire">Fire</button></li>
+                <li class="nav-item"><button class="btn btn-header water" id="water">Water</button></li>
+                <li class="nav-item"><button class="btn btn-header grass" id="grass">Grass</button></li>
+                <li class="nav-item"><button class="btn btn-header electric" id="electric">Electric</button></li>
+                <li class="nav-item"><button class="btn btn-header ice" id="ice">Ice</button></li>
+                <li class="nav-item"><button class="btn btn-header fighting" id="fighting">Fighting</button></li>
+                <li class="nav-item"><button class="btn btn-header poison" id="poison">Poison</button></li>
+                <li class="nav-item"><button class="btn btn-header ground" id="ground">Ground</button></li>
+                <li class="nav-item"><button class="btn btn-header flying" id="flying">Flying</button></li>
+                <li class="nav-item"><button class="btn btn-header psychic" id="psychic">Psychic</button></li>
+                <li class="nav-item"><button class="btn btn-header bug" id="bug">Bug</button></li>
+                <li class="nav-item"><button class="btn btn-header rock" id="rock">Rock</button></li>
+                <li class="nav-item"><button class="btn btn-header ghost" id="ghost">Ghost</button></li>
+                <li class="nav-item"><button class="btn btn-header dark" id="dark">Dark</button></li>
+                <li class="nav-item"><button class="btn btn-header dragon" id="dragon">Dragon</button></li>
+                <li class="nav-item"><button class="btn btn-header steel" id="steel">Steel</button></li>
+                <li class="nav-item"><button class="btn btn-header fairy" id="Fairy">Fairy</button></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!--El main indica donde se va a poner el contenido de la página-->
+    <main>
+        <div id="todos">
+            <div class="pokemon-todos" id="listaPokemon">
+             <!--   <div class="pokemon">
+                    <p class="pokemon-id-back">#001</p>
+                    <div class="pokemon-imagen">
+                        <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1.png" alt="bulbasaur">
+                    </div>
+                    <div class="pokemon-info">
+                        <div class="nombre-contenedor">
+                            <p class="pokemon-id">#001</p>
+                            <h2 class="pokemon-nombre">BULBASAUR</h2>
+                        </div>
+                        <div class="pokemon-tipos">
+                            <p class="water tipo">WATER</p>
+                            <p class="poison tipo">POISON</p>
+                        </div>
+                        <div class="pokemon-stats">
+                            <p class="stat">0.7m</p>
+                            <p class="stat">6.9kg</p>
+                        </div>
+                    </div>  
+                </div>
+                <div class="pokemon">
+                    <p class="pokemon-id-back">#002</p>
+                    <div class="pokemon-imagen">
+                        <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/2.png" alt="ivysaur">
+                    </div>
+                    <div class="pokemon-info">
+                        <div class="nombre-contenedor">
+                            <p class="pokemon-id">#002</p>
+                            <h2 class="pokemon-nombre">IVYSAUR</h2>
+                        </div>
+                        <div class="pokemon-tipos">
+                            <p class="water tipo">WATER</p>
+                            <p class="poison tipo">POISON</p>
+                        </div>
+                        <div class="pokemon-stats">
+                            <p class="stat">1m</p>
+                            <p class="stat">13kg</p>
+                        </div>
+                    </div>  
+                </div>
+                <div class="pokemon">
+                    <p class="pokemon-id-back">#003</p>
+                    <div class="pokemon-imagen">
+                        <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/3.png" alt="venusaur">
+                    </div>
+                    <div class="pokemon-info">
+                        <div class="nombre-contenedor">
+                            <p class="pokemon-id">#003</p>
+                            <h2 class="pokemon-nombre">VENUSAUR</h2>
+                        </div>
+                        <div class="pokemon-tipos">
+                            <p class="water tipo">WATER</p>
+                            <p class="poison tipo">POISON</p>
+                        </div>
+                        <div class="pokemon-stats">
+                            <p class="stat">2m</p>
+                            <p class="stat">100kg</p>
+                        </div>
+                    </div>  
+                </div>
+                <div class="pokemon">
+                    <p class="pokemon-id-back">#004</p>
+                    <div class="pokemon-imagen">
+                        <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/4.png" alt="charmander">
+                    </div>
+                    <div class="pokemon-info">
+                        <div class="nombre-contenedor">
+                            <p class="pokemon-id">#004</p>
+                            <h2 class="pokemon-nombre">CHARMANDER</h2>
+                        </div>
+                        <div class="pokemon-tipos">
+                            <p class="fire tipo">FIRE</p>
+                        </div>
+                        <div class="pokemon-stats">
+                            <p class="stat">0.6m</p>
+                            <p class="stat">8.5kg</p>
+                        </div>
+                    </div>  
+                </div>
+                <div class="pokemon">
+                    <p class="pokemon-id-back">#005</p>
+                    <div class="pokemon-imagen">
+                        <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/5.png" alt="charmeleon">
+                    </div>
+                    <div class="pokemon-info">
+                        <div class="nombre-contenedor">
+                            <p class="pokemon-id">#005</p>
+                            <h2 class="pokemon-nombre">CHARMELEON</h2>
+                        </div>
+                        <div class="pokemon-tipos">
+                            <p class="fire tipo">FIRE</p>
+                        </div>
+                        <div class="pokemon-stats">
+                            <p class="stat">1.1m</p>
+                            <p class="stat">19kg</p>
+                        </div>
+                    </div>  
+                </div>
+                <div class="pokemon">
+                    <p class="pokemon-id-back">#006</p>
+                    <div class="pokemon-imagen">
+                        <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/6.png" alt="charizard">
+                    </div>
+                    <div class="pokemon-info">
+                        <div class="nombre-contenedor">
+                            <p class="pokemon-id">#006</p>
+                            <h2 class="pokemon-nombre">CHARIZARD</h2>
+                        </div>
+                        <div class="pokemon-tipos">
+                            <p class="fire tipo">FIRE</p>
+                            <p class="flying tipo">FLY</p>
+                        </div>
+                        <div class="pokemon-stats">
+                            <p class="stat">1.7m</p>
+                            <p class="stat">90.5kg</p>
+                        </div>
+                    </div>  
+                </div>
+                -->  <div class="pokemon">
+                    <p class="pokemon-id-back">#025</p>
+                    <div class="pokemon-imagen">
+                        <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/25.png" alt="Pikachu">
+                      </div>
+                   <div class="pokemon-info">
+                        <div class="nombre-contenedor">
+                            <p class="pokemon-id">#025</p>
+                            <h2 class="pokemon-nombre">Pikachu</h2>
+                        </div>
+                        <div class="pokemon-tipos">
+                            <p class="electric tipo">ELECTRIC</p>
+                        </div>
+                        <div class="pokemon-stats">
+                            <p class="stat">0.4m</p>
+                            <p class="stat">6kg</p>
+                        </div>
+                    </div>  
+               </div>     
+             </div>
+        </div>
+    </main>
+
+    <script src="main.js"></script>
+
+    
+</body>

@@ -1,0 +1,66 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    background-color: blue;
+    display: grid; /* El display y el place-items es para que este todo centrado*/
+    place-items: center;
+}
+
+
+.calculadora {
+    background-color: blueviolet;
+    color:aliceblue;
+    display: grid; /*para poder meter los elementos dentro */
+    grid-template-columns: repeat(4, 1fr); /* para dar forma a las columnas de los botones*/
+    gap: .5rem; /*espacio de los botones entre si*/
+    width: 350px;
+    max-width: 100%; /* para que como maximo tenga el ancho de la pantalla*/
+    padding: 1.5rem; /* separar todo un poco de los bordes*/
+    border-radius: 1rem; /*para dar bordes a las esquinas*/
+}
+
+
+.pantalla {
+    grid-column: 1/5; /* en este caso con 1/5 ocupa todo el ancho de la pantalla*/
+    padding: 1.5rem;
+    background-color: brown;
+    font-size: 2rem; /* tamaño de la letra*/
+    text-align: right;
+    border-radius: .5rem;
+    margin-bottom: 1rem;
+    font-family: monospace; /*tipo de letra*/
+    font-weight: 600; /*grosor de los numeros*/
+}
+
+.btn {
+    background-color: black;
+    color: aliceblue;
+    border: 0; /*quitas el borde de los botones al ponerlo en 0*/
+    padding: 1.5rem .5rem; /* separar todo un poco de los bordes*/
+    display: flex;
+    justify-content: center; /*alinear los numeros al centro*/
+    align-items: center; /*alinear los numeros al centro*/
+    border-radius: .5rem;
+    cursor: pointer; /* sale la manita al pasar el cursor por encima*/
+
+}
+
+.btn:hover {
+    background-color: bisque;
+}
+
+#cero {
+    grid-column: span 2;
+}
+
+#igual {
+    grid-row: span 2;
+    background-color: chartreuse;
+}
+

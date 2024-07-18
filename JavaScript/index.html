@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+<h2>Mi primer java script</h2>
+
+<p id="demo">HOLA. BIENVENIDO!</p>
+
+<button type="button" onclick="myFunction()">Pulsame</button>
+
+
+<script>
+    function myFunction() {
+      document.getElementById("demo").innerHTML = "Hasta luego Lucas!";
+    }
+</script>
+
+<p>---------------------------------------------------</p>
+
+<!--
+********Posibilidades de visualización de JavaScript
+            Escribir en un elemento HTML, utilizando innerHTML.
+            Escribir en la salida HTML usando document.write().
+            Escribiendo en un cuadro de alerta, usando window.alert().
+            Escribiendo en la consola del navegador, usando console.log().
+*******************
+-->
+<h2>Usando innerHTML</h2>
+<p>Voy a sumar dos números y colocar el resultado en un id "variable" 5+6</p>
+
+<p id="demo2"></p>
+
+<script>
+document.getElementById("demo2").innerHTML = 5 + 6;
+</script>
+
+<!-------->
+
+<h2>Usando document.write</h2>
+<p>Suma los dos números directamente sin poner el resultado en una variable</p>
+
+<p>Nunca llame a document.write después de que el documento haya terminado de cargarse. Esto sobrescribirá todo el documento.</p>
+
+<script>
+document.write(5 + 6);
+</script>
+
+<h2>document.write</h2>
+<p>Al usar document.write borra todo lo demas despues de cargar un documento html</p>
+
+<button type="button" onclick="document.write(6+6)">pulsame y lo borraras todo</button>
+
+<!-------
+
+<h2>Usando window.alert</h2>
+<p>Esto es el cartel que sale al principio al cargar.</p>
+
+<script>
+window.alert(5 + 6);
+</script>
+-->
+
+<!-------->
+
+<h2>Usando window.print()</h2>
+
+<p>Pulsa el boton y se abrira una ventana para imprimir</p>
+
+<button onclick="window.print()">Imprimir está página</button>
+
+
+<p>---------------------------------------------------</p>
+
+<!--
+********STATEMENTS / ESTAMENTOS*******************
+-->
+
+<h2>JavaScript Statements</h2>
+
+<p>Un <b>programa JavaScript</b>es una lista de  <b>sentencias</b> que debe ejecutar una computadora.</p>
+    
+<p id="demo3"></p>
+
+<script>
+let x, y, z;  // Statement 1
+x = 5;        // Statement 2
+y = 6;        // Statement 3
+z = x + y;    // Statement 4
+
+document.getElementById("demo3").innerHTML =
+"El valor de z es: " + z + ".";  
+</script>
+
+<p>Otro ejemplo:</p>
+<p id="demo4"></p>
+
+<script>
+document.getElementById("demo4").innerHTML = "Hello Dolly.";
+</script>
+
+<p>Otro ejemplo: <br>
+    let a, b, c; <br>
+    a = 5; <br>
+    b = 6; <br>
+    c = a + b;<br>
+    a = 5; b = 6; c = a + b;
+</p>
+
+<p id="demo5"></p>
+
+<script>
+let a, b, c;
+a = 5;
+b = 6;
+c = a + b;
+document.getElementById("demo5").innerHTML = c;
+</script>
+
+<p>---------------------------------------------------</p>
+
+<!--
+********FUNCIONES*******************
+-->
+
+<h2>Usando funciones</h2>
+
+<p>En JavaScript las funciones se ecriben { and }</p>
+
+<button type="button" onclick="myFunction()">Pulsame!</button>
+
+<p id="demo6"></p>
+<p id="demo7"></p>
+
+<script>
+function myFunction() {
+  document.getElementById("demo1").innerHTML = "Hello Dolly!";
+  document.getElementById("demo2").innerHTML = "How are you?";
+}
+</script>
+
+<p>---------------------------------------------------</p>
+
+<!--
+********PALABRAS CLAVES DE JAVASCRIPT*******************
+-->
+
+<h2>Palabras claves</h2>
+<p>Las declaraciones de JavaScript a menudo comienzan con una palabra clave para identificar
+    la acción de JavaScript que se debe realizar:</p><br>
+    
+    <b>(var): </b> Declara una variable<br>
+    <b>(let):</b> Declara una variable de bloque<br>
+    <b>(const):</b>	Declara una constante de bloque<br>
+    <b>(if):</b> Marca un bloque de declaraciones que se ejecutarán según una condición<br>
+    <b>(switch)</b>	Marca un bloque de sentencias que se ejecutarán en diferentes casos<br>
+    <b>(for):</b> Marca un bloque de declaraciones que se ejecutarán en un bucle.<br>
+    <b>(function):</b>	Declara una función<br>
+    <b>(return):</b> Sale de una función<br>
+    <b>(try):</b> Implementa el manejo de errores en un bloque de declaraciones.</p>
+
+
+    <p>---------------------------------------------------</p>
+<!--
+********VARIABLES*******************
+-->
+
+<h2>VARIABLES</h2>
+
+<b>Automático</b> Declara una variable de forma automática <br>
+x = 5;<br>
+<b>(var): </b> Declara una variable, con "var" puedes redeclarar una variable<br>
+var x = 5;<br>
+<b>(let):</b> Declara una variable de bloque, con "let" no puedes redeclarar una variable, cuando le des un valor, no se lo podras cambiar<br>
+let x = 5;<br>
+<b>(const):</b>	Declara una constante de bloque, con "const" no puedes redeclarar una variable, cuando le des un valor, no se lo podras cambiar<br>
+const x = 5;<br>
+
+<p>---------------------------------------------------</p>
+
+<!--
+********TIPOS DE DATOS*******************
+-->
+
+<h2>TIPOS DE DATOS</h2>
+
+<p>
+<b>Numbers:</b><br>
+let length = 16;<br>
+let weight = 7.5;<br>
+
+<b>Strings:</b><br>
+let color = "Yellow";<br>
+let lastName = "Johnson";<br>
+
+<b>Booleans</b><br>
+let x = true;<br>
+let y = false;<br>
+
+<b>Object:</b><br>
+const person = {firstName:"John", lastName:"Doe"};<br>
+
+<b>Array object:</b><br>
+const cars = ["Saab", "Volvo", "BMW"];<br>
+
+<b>Date object:</b><br>
+const date = new Date("2022-03-25");<br>
+</p>
+
+
+<p>---------------------------------------------------</p>
+
+<!--
+********FUNCIONES*******************
+-->
+
+<h2>FUNCIONES</h2>
+
+<p id="demo8"></p>
+
+<script>
+function myFunction(p1, p2) {
+  return p1 * p2;
+}
+
+let result = myFunction(4, 3);
+document.getElementById("demo8").innerHTML = result;
+</script>
+
+
+<p>---------------------------------------------------</p>
+
+<!--
+********OBJETOS*******************
+-->
+
+<h2>OBJETOS</h2>
+
+<p id="demo10"></p>
+
+<script>
+// Create an Object:
+const car = {type:"Fiat", model:"500", color:"white"};
+
+// Display Data from the Object:
+document.getElementById("demo10").innerHTML = "The car type is " + car.type;
+</script>
+
+<h3>AÑADIR ELEMENTOS</h3>
+
+<p id="demo11"></p>
+
+<script>
+// Creamos un objeto vacío
+const person = {};
+
+// Añadimos propiedades
+person.firstName = "John";
+person.lastName = "Doe";
+person.age = 50;
+person.eyeColor = "blue"; 
+
+// Display Data from Object
+document.getElementById("demo11").innerHTML =
+person.firstName + " tiene " + person.age + " años.";
+</script>
+
+<h3>SE PUEDEN COPIAR UNA VEZ HECHOS</h3>
+
+<p id="demo13"></p>
+
+<script>
+// Crea un objeto
+const person2 = {
+  firstName: "John",
+  lastName: "Doe",
+  age:50,
+  eyeColor: "blue"
+};
+
+// Creando una copia
+const copy = person2;
+
+// Cambio la edad
+x.age = 10;
+
+document.getElementById("demo13").innerHTML =
+person2.firstName + " is " + copy.age + " years old.";
+</script>
+
+<p>Tambien se puede eliminar un elemento usando el "delete.person.age"</p>
+
+<h3>OBJETOS ANIDADOS</h3>
+
+<p id="demo14"></p>
+
+<script>
+// Creando varios objetos
+const myObj = {
+  name: "John",
+  age: 30,
+  myCars: {
+    car1: "Ford",
+    car2: "BMW",
+    car3: "Fiat"
+  }
+}
+document.getElementById("demo14").innerHTML = myObj.myCars.car2;
+</script>
+
+<h3>METODOS DE OBJETOS</h3>
+<p>A method is a function definition stored as a property value.</p>
+
+<p id="demo15"></p>
+
+<script>
+const person3 = {
+  firstName: "John",
+  lastName: "Doe",
+  id: 5566,
+  fullName: function() {
+    return this.firstName + " " + this.lastName;
+  }
+};
+
+document.getElementById("demo15").innerHTML = person3.fullName();
+</script>
+
+<h3>IMPRIMIR OBJETOS</h3>
+
+<p id="demo16"></p>
+
+<script>
+// Creo un objeto
+const person4 = {
+  name: "John",
+  age: 30,
+  city: "New York"
+};
+
+// Display Object
+document.getElementById("demo16").innerHTML = person4.name + ", " + person4.age + ", " + person4.city;
+</script>
+
+<h3>IMPRIMIENDO UN OBJETO EN BUCLE</h3>
+
+<p id="demo17"></p>
+
+<script>
+// Create an Object
+const person5 = {
+  name: "John",
+  age: 30,
+  city: "New York"
+};
+
+// Build a Text
+let text = "";
+for (let x in person5) {
+  text += person5[x] + " ";
+};
+
+// Display the Text
+document.getElementById("demo17").innerHTML = text;
+</script>
+
+<h3>IMPRIMIENDO UN OBJETO, AL PASARLO A UN ARRAYS</h3>
+<P><b>Usando object.values:</b></P>
+
+<p id="demo18"></p>
+
+<script>
+// Creo un objeto
+const person6 = {
+  name: "John",
+  age: 30,
+  city: "New York"
+};
+
+// Creo un array
+const myArray = Object.values(person6);
+
+// Imprimo el Array
+document.getElementById("demo18").innerHTML = myArray;
+</script>
+
+<h3>IMPRIMIENDO UN OBJETO, USANDO "Object.entries()"</h3>
+<P><b>Usando object.entries, simplific el uso de bucles:</b></P>
+
+<p id="demo19"></p>
+
+<script>
+const fruits = {Bananas:300, Oranges:200, Apples:500}; 
+
+let text2 = "";
+for (let [fruit, amount] of Object.entries(fruits)) {
+  text2 += fruit + ": " + amount + "<br>";
+}
+
+document.getElementById("demo19").innerHTML = text2;
+</script>
+
+<h3>IMPRIMIENDO UN OBJETO, USANDO "JSON.stringify()"</h3>
+<p>Los objetos JavaScript se pueden convertir en una cadena con el método JSON JSON.stringify().
+    JSON.stringify()Está incluido en JavaScript y es compatible con los principales navegadores.<br>
+    El resultado será una cadena escrita en notación JSON:<br>
+
+    {"nombre": "John", "edad": 50", "ciudad": "Nueva York"}</p>
+
+    <p id="demo20"></p>
+
+    <script>
+    // Creo un objeto
+    const person7 = {
+      name: "John",
+      age: 30,
+      city: "New York"
+    };
+    
+    // imprimo JSON
+    document.getElementById("demo20").innerHTML = JSON.stringify(person7);
+    </script>
+
+<p>---------------------------------------------------</p>
+
+<!--
+********CONSTRUCTORES*******************
+-->
+
+<h2>CONSTRUCTORES</h2>
+
+<p id="demo21"></p>
+<p id="demo22"></p>
+
+<script>
+// Constructor Function for Person objects
+function Person(first, last, age, eye) {
+  this.firstName = first;
+  this.lastName = last;
+  this.age = age;
+  this.eyeColor = eye;
+  this.nationality = "English"; // Puedes dar un valor predeterminado
+  this.fullName = function() {
+    return this.firstName + " " + this.lastName; //Un constructor tambien puede tener metodos
+  };
+}
+
+// Create a Person object
+const myFather = new Person("John", "Doe", 50, "blue");
+const myMother = new Person("Sally", "Rally", 48, "green");
+
+// Puedes añadir una cualidad que se añadirá solo a Father
+myFather.coche = "BMW";
+
+// Puedes añadir una cualidad a Person
+
+Person.prototype.dientes = "SI";
+
+// Display age
+document.getElementById("demo21").innerHTML =
+"Mi padre tiene " + myFather.age + "años y le gusta conducir su " + myFather.coche + ". My madre tiene " + myMother.age + "años y los dos son de nacionalidad " + myMother.nationality 
++ ". Mi madre tiene dientes? " + myMother.dientes;
+
+document.getElementById("demo22").innerHTML = "El nombre completo de mi padres es " + myFather.fullName();
+</script>
+
+
+
+</body>
+</html>

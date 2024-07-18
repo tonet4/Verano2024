@@ -1,0 +1,117 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #1c1c1c;
+    font-family:'Courier New', Courier, monospace;
+}
+
+
+.nav {
+    display: grid; /*para tener tres columnas*/
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem; /*para separarlos entre si*/
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.nav-list {
+    display: flex; /* para que se centren uno al lado del otro*/
+    text-align: left;
+    flex-wrap: wrap; /*para si sobresalen que no se vayan para bajo*/
+    
+    
+}
+
+body {
+    min-height: 100vh;
+    background-color: #ececec;;
+}
+
+
+header {
+   padding-block: 1rem;
+    box-shadow: 0 0 2rem -1rem rgba(0, 0, 0, 0.5); /*para darle sombra*/
+    
+}
+
+ul {
+    list-style-type: none;
+}
+
+
+.todo {
+    display: grid; /*para tener tres columnas*/
+    grid-template-columns: 1fr;
+    gap: 1rem; /*para separarlos entre si*/
+    padding-block: 1rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+
+}
+
+.casillas {
+    border-radius: 1rem;
+    background-color: #f7f7f7;
+    box-shadow: 0 0 3rem -1rem rgba(0, 0, 0, 0.25);
+    padding-block: 1rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    position: relative; /*hace que este por encima del id-back*/
+    isolation: isolate; /*esto se pone para que el numero que sale detras de la imagen con el z-index no se vaya mas atras de este punto*/
+    overflow: hidden;
+}
+
+
+img {
+    width: 100%;
+    
+}
+
+.imagenFondo {
+    position: absolute; /*hace que se quede por debajo de la imagen*/
+    top: 1rem;
+    font-weight: 800;
+    opacity: 0.4; /* reduce la opacidad de la imagen a la mitad */
+    z-index: -1; /*se tiene que poner en donde no quieres que pase un isolation, en este caso seria "pokemon"*/
+    padding-right: 1rem;
+    padding-bottom: 1rem;
+    
+
+}
+
+.cosas {
+    padding-block: 1rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.listado {
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-rows: repeat(12, 1fr); /* esto establece 12 filas */
+    
+  }
+
+  .cosas {
+    grid-column: auto;
+    font-weight: 800;
+  }
+
+  h2 {
+    text-shadow: 0 0 10px #f69f9f; /* Añadir sombra oscura */
+  }
+
+ 
+
+.listado-componentes {
+    text-align: center;
+    font-weight: 500;
+    color: #f55454;
+    
+}
+
+.tituloCompo {
+    text-align: center;
+    padding-bottom: 1rem;
+}

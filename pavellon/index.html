@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pavelló Catarroja</title>
+    <!-- Link necesario para poder usar boostrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!-- Link necesario para poder usar los iconos de boostrap-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <!--Link necesario para especificar donde estan nuestro css-->
+    <link rel="stylesheet" href="./Estilos/style.css">
+
+    
+</head>
+<body>
+        <!-- Botonera principal de arriba
+            *He puesto "sticky-top" para que la barra de meu esté siempre stiky-->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary sticky-top">
+        <div class="container-fluid">
+            <img src="./imagenes/imagen1.png" alt="Logo" style="height: 40px;">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#"><i class="bi bi-house"></i> Inicio</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#horarios">Horarios</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="clases.php">Clases</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#abonos">Precio-Abonos</a>
+              </li>
+            </ul>
+            <form class="d-flex" role="search">
+             <!--<button class="btn btn-outline-success" type="button" onclick="window.location.href = 'registro.html';">Area Socios</button> -->
+             <a href="registro.html" class="btn btn-outline-success" role="button">Area Socios</a>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16"><path d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0ZM3.75 6a.75.75 0 0 0 0 1.5h2.409a1.9 1.9 0 0 0-.025.151l-.307 2.508-.323 3.011a.75.75 0 0 0 1.492.16l.25-2.33h1.509l.25 2.33a.748.748 0 0 0 1.199.552.75.75 0 0 0 .291-.712l-.32-3-.309-2.519a1.9 1.9 0 0 0-.025-.151h2.409a.75.75 0 0 0 0-1.5h-8.5ZM8 6a2 2 0 1 0 .001-3.999A2 2 0 0 0 8 6Z"></path></svg>
+            </form>
+          </div>
+        </div>
+      </nav>
+      <!--Imagen inicial-->
+      <div class="hero-image">
+        <img src="./imagenes/pistas.jpg" class="img-fluid" alt="pistas">
+        <div class="hero-text">
+            <h1>SIN DEPORTE NO HAY VIDA</h1>
+            <a href="registro.html" class="btn btn-primary">Registrarse</a>
+        </div>
+    </div>
+
+    <!--HORARIOS PABELLON-->
+
+  <div class="container-fluid" style="text-align: center;">
+    <br>
+    <h2>--HORARIOS PABELLÓN--</h2>
+    <br>
+  </div>
+
+     <!-- Horarios del Pabellón -->
+  <div id="horarios" class="container mt-4" >
+    <div class="row">
+        <div class="col-md-6 mx-auto p-3 border border-dark" style="text-align: center;">
+            <h4>Horario Normal</h4>
+            <p>Lunes a Viernes: 8:00 - 23:00</p>
+            <p>Sábados: 9:00 - 2200</p>
+            <p>Domingos: 10:00 - 15:00</p>
+        </div>
+        <div class="col-md-6 mx-auto p-3 border border-dark" style="text-align: center;">
+            <h4>Horario de Verano</h4>
+            <p>Lunes a Viernes: 8:30 - 21:00</p>
+            <p>Sábados: 9:00 - 14:00</p>
+            <p>Domingos: Cerrado</p>
+        </div>
+    </div>
+</div>
+<br>
+
+<!--ABONOS-->
+<div id="abonos" class="container-fluid" style="text-align: center;">
+    <br>
+    <h2>--PRECIO/ABONOS--</h2>
+    <br>
+  </div>
+
+  <div class="container mt-4">
+    <table class="schedule-table table table-bordered border-primary">
+        <thead>
+            <tr>
+                <th colspan="2" style="background-color: #030b7a;  color: rgb(255, 255, 255);">ABONOS</th>
+                <th style="background-color: #030b7a;  color: rgb(255, 255, 255);">CUOTA/MES</th>
+                <th style="background-color: #030b7a;  color: rgb(255, 255, 255);">MATRICULA</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td style="background-color: #030b7a;  color: rgb(255, 255, 255);">MATINS</td>
+                <td style="background-color: #ADD8E6;">De Lunes a Sabado hasta las 15:00</td>
+                <td style="background-color: #ADD8E6;">21.40€</td>
+                <td style="background-color: #ADD8E6;">26.70</td>
+            </tr>
+            <tr>
+                <td style="background-color: #030b7a;  color: rgb(255, 255, 255);">FAMILIAR</td>
+                <td style="background-color: #ADD8E6;">Hasta 3 miembros, apartir de 4 suplemento</td>
+                <td style="background-color: #ADD8E6;">42.60</td>
+                <td style="background-color: #ADD8E6;">26.70</td>
+            </tr>
+            <tr>
+                <td style="background-color: #030b7a;  color: rgb(255, 255, 255);">GENERAL</td>
+                <td style="background-color: #ADD8E6;">De 20 a 59 años</td>
+                <td style="background-color: #ADD8E6;">32€</td>
+                <td style="background-color: #ADD8E6;">26.70</td>
+            </tr>
+            <tr>
+                <td style="background-color: #030b7a;  color: rgb(255, 255, 255);">JOVE</td>
+                <td style="background-color: #ADD8E6;">De 16 a 19 años</td>
+                <td style="background-color: #ADD8E6;">21.40€</td>
+                <td style="background-color: #ADD8E6;">26.70</td>
+            </tr>
+            <tr>
+                <td style="background-color: #030b7a;  color: rgb(255, 255, 255);">3º EDAD/PENSIONISTAS</td>
+                <td style="background-color: #ADD8E6;">A partir de 60 años</td>
+                <td style="background-color: #ADD8E6;">19.20€</td>
+                <td style="background-color: #ADD8E6;">26.70</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<br>
+<br>
+
+ <!--NUESTROS MONITORES-->
+ <div class="subtitulos">
+    <br>
+    <h2>--NUESTROS MONITORES--</h2>
+    <br>
+  </div>
+
+<div class="contenedor-foto">
+    <div class="card" style="background-image: url('./imagenes/moni1.jpg')"></div>
+    <div class="card" style="background-image: url('./imagenes/moni2.jpg')"></div>
+    <div class="card" style="background-image: url('./imagenes/moni3.jpg')"></div>
+    <div class="textos">
+        <h3>Lidia Hernandez</h3>
+        <p>Especialista en Body pump</p>
+    </div>
+    <div class="textos">
+        <h3>Ivan García</h3>
+        <p>Especilista de Spining</p>
+    </div>
+    <div class="textos">
+        <h3>Carlos Ramiro</h3>
+        <p>Técnico de sala fitness</p>
+    </div> 
+</div>
+
+
+    <!--NUESTRAS INSTALACIONES-->
+    <div class="subtitulos">
+      <br>
+      <h2>--NUESTRAS INSTALACIONES--</h2>
+      <br>
+    </div>
+  
+    <div class="container-fluid mt-4">
+      <div class="row mb-4">
+        <div class="col-md-6 description">
+            <img src="./imagenes/gym1.png" alt="Sala Fitnes">
+            <div>
+                <h4>Sala Fitnes</h4>
+                <p>Contamos con una sala de fitness equipada con la última tecnología (Technogym).</p>
+                <ul class="list-unstyled">
+                    <li>6 cintas de correr</li>
+                    <li>8 máquinas de esquiar</li>
+                    <li>10 bicicletas estáticas</li>
+                    <li>Área de pesas con diversos tipos de mancuernas y barras</li>
+                    <li>Máquinas de musculación para todos los grupos musculares</li>
+                    <li>Zonas de estiramiento y entrenamiento funcional</li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div id="carouselFitness" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselFitness" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselFitness" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselFitness" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="./imagenes/fitnes/salafitness2.jpg" class="d-block w-100" alt="Fitness 1">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="./imagenes/fitnes/salafitness1.jpg" class="d-block w-100" alt="Fitness 2">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="./imagenes/fitnes/salafitness3.jpg" class="d-block w-100" alt="Fitness 3">
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselFitness" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselFitness" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </div>
+    </div>
+      
+      <div class="row mb-4">
+          <div class="col-md-6 description">
+              <img src="./imagenes/gym3.png" alt="Pistas" width="20%">
+              <div>
+                  <h4>Pistas</h4>
+                  <p>En nuestras instalaciones contamos con una pista polivalente:</p>
+                  <ul class="list-unstyled">
+                    <li>Dos canchas de baloncesto con marcador electrónico</li>
+                    <li>Dos campos de futbito</li>
+                    <li>Gradas para espectadores</li>
+                    <li>Capacidad para realizar grandes eventos deportivos</li>
+                </ul>
+              </div>
+          </div>
+          <div class="col-md-6">
+              <div id="carouselPistas" class="carousel slide" data-bs-ride="carousel">
+                  <div class="carousel-indicators">
+                      <button type="button" data-bs-target="#carouselPistas" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                      <button type="button" data-bs-target="#carouselPistas" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                      <button type="button" data-bs-target="#carouselPistas" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                  </div>
+                  <div class="carousel-inner">
+                      <div class="carousel-item active">
+                          <img src="./imagenes/pabellon/pabelloncatarroja.jpg" class="d-block w-100" alt="Pistas 1">
+                      </div>
+                      <div class="carousel-item">
+                          <img src="./imagenes/pabellon/pabelloncatarroja.jpg" class="d-block w-100" alt="Pistas 2">
+                      </div>
+                      <div class="carousel-item">
+                          <img src="./imagenes/pabellon/pistas.jpg" class="d-block w-100" alt="Pistas 3">
+                      </div>
+                  </div>
+                  <button class="carousel-control-prev" type="button" data-bs-target="#carouselPistas" data-bs-slide="prev">
+                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Previous</span>
+                  </button>
+                  <button class="carousel-control-next" type="button" data-bs-target="#carouselPistas" data-bs-slide="next">
+                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Next</span>
+                  </button>
+              </div>
+          </div>
+      </div>
+      
+      <div class="row mb-4">
+          <div class="col-md-6 description">
+              <img src="./imagenes/descarga.png" alt="Ciclo Indoor">
+              <div>
+                  <h4>Ciclo Indoor</h4>
+                  <p>Donde puedes practicar Spinning de alto nivel, con técnicos altamente cualificados.</p>
+                  <ul class="list-unstyled">
+                    <li>Más de 30 bicicletas de la marca TomaHawk</li>
+                    <li>Ambientado con luces y sonido de discoteca</li>
+                    <li>Monitores de primer nivel</li>
+                    <li>Eventos especiales en Navidad, Fallas, Fin de curso...</li>
+                </ul>
+              </div>
+          </div>
+          <div class="col-md-6">
+              <div id="carouselCiclo" class="carousel slide" data-bs-ride="carousel">
+                  <div class="carousel-indicators">
+                      <button type="button" data-bs-target="#carouselCiclo" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                      <button type="button" data-bs-target="#carouselCiclo" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                      <button type="button" data-bs-target="#carouselCiclo" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                  </div>
+                  <div class="carousel-inner">
+                      <div class="carousel-item active">
+                          <img src="./imagenes/ciclo/ciclo12.jpg" class="d-block w-100" alt="Ciclo 1">
+                      </div>
+                      <div class="carousel-item">
+                          <img src="./imagenes/ciclo/ciclo3.jpg" class="d-block w-100" alt="Ciclo 2">
+                      </div>
+                      <div class="carousel-item">
+                          <img src="./imagenes/ciclo/ciclo4.jpg" class="d-block w-100" alt="Ciclo 3">
+                      </div>
+                  </div>
+                  <button class="carousel-control-prev" type="button" data-bs-target="#carouselCiclo" data-bs-slide="prev">
+                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Previous</span>
+                  </button>
+                  <button class="carousel-control-next" type="button" data-bs-target="#carouselCiclo" data-bs-slide="next">
+                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Next</span>
+                  </button>
+              </div>
+          </div>
+      </div>
+      
+      <div class="row mb-4">
+          <div class="col-md-6 description">
+              <img src="./imagenes/gym4.png" alt="Salas Polivalentes">
+              <div>
+                  <h4>Salas Polivalentes</h4>
+                  <ul class="list-unstyled">
+                    <li>Disponemos de 3 salas de hasta 90m cuadrados</li>
+                    <li>Salas climatizadas tanto en verano como en invierno</li>
+                    <li>Material de primera calidad para realizar las clases</li>
+                    <li>Clases con aforo limitado</li>
+                </ul>
+              </div>
+          </div>
+          <div class="col-md-6">
+              <div id="carouselPolivalentes" class="carousel slide" data-bs-ride="carousel">
+                  <div class="carousel-indicators">
+                      <button type="button" data-bs-target="#carouselPolivalentes" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                      <button type="button" data-bs-target="#carouselPolivalentes" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                      <button type="button" data-bs-target="#carouselPolivalentes" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                  </div>
+                  <div class="carousel-inner">
+                      <div class="carousel-item active">
+                          <img src="./imagenes/salas/salapabellon1.jpg" class="d-block w-100" alt="Polivalente 1">
+                      </div>
+                      <div class="carousel-item">
+                          <img src="./imagenes/salas/salapabellon2.jpg" class="d-block w-100" alt="Polivalente 2">
+                      </div>
+                      <div class="carousel-item">
+                          <img src="./imagenes/salas/salapabellon3.jpg" class="d-block w-100" alt="Polivalente 3">
+                      </div>
+                  </div>
+                  <button class="carousel-control-prev" type="button" data-bs-target="#carouselPolivalentes" data-bs-slide="prev">
+                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Previous</span>
+                  </button>
+                  <button class="carousel-control-next" type="button" data-bs-target="#carouselPolivalentes" data-bs-slide="next">
+                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Next</span>
+                  </button>
+              </div>
+          </div>
+      </div>
+  </div>
+
+   <!--LOCALIZACIÓN-->
+   <div class="container-fluid" style="text-align: center;">
+    <br>
+    <h2>--LOCALIZACIÓN--</h2>
+    <br>
+  </div>
+
+   <!-- SECCIÓN DE CONTACTO CON LOCALIZACIÓN Y FORMULARIO -->
+    <div class="container mt-4" style="background-color: rgb(255, 255, 255);">
+    <div class="row">
+        <!-- Columna del iframe con la localización -->
+        <div class="col-md-6">
+             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3082.9070067228886!2d-0.41612502422513514!3d39.40360987162044!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd604e7fe6a4e507%3A0xb291deffda98f604!2sPabellon%20Municipal%20Catarroja!5e0!3m2!1ses!2ses!4v1719348666236!5m2!1ses!2ses" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        <!-- Columna del formulario de contacto -->
+        <div class="col-md-6">
+            <form>
+                <div class="mb-3">
+                    <h4>¿Tiene alguna duda?</h4>
+                </div>
+                <div class="mb-3">
+                    <label for="name" class="form-label">Nombre</label>
+                    <input type="text" class="form-control" id="name" required>
+                </div>
+                <div class="mb-3">
+                    <label for="email" class="form-label">Correo Electrónico</label>
+                    <input type="email" class="form-control" id="email" required>
+                </div>
+                <div class="mb-3">
+                    <label for="message" class="form-label">Mensaje</label>
+                    <textarea class="form-control" id="message" rows="4" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Enviar</button>
+            </form>
+        </div>
+    </div>
+</div>
+<br><br>
+
+<footer class="bg-dark text-white text-center py-4">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <h5>Contacto</h5>
+                <p>Email: info@pabellocatarroja.com</p>
+                <p>Teléfono: +34 123 456 789</p>
+            </div>
+            <div class="col-md-4">
+                <img src="./imagenes/imagen1.png" alt="Logo" style="height: 80px;"> 
+            </div>
+            <div class="col-md-4">
+                <h5>Síguenos</h5>
+                <a href="https://www.facebook.com/pavpiscatarroja/?locale=es_ES" class="text-white me-3"><i class="bi bi-facebook"></i></a>
+                <a href="https://x.com/i/flow/login?redirect_after_login=%2Fpabcatarroja" class="text-white me-3"><i class="bi bi-x"></i></a>
+                <a href="https://www.instagram.com/ajuntcatarroja/?hl=es" class="text-white me-3"><i class="bi bi-instagram"></i></a>
+                <a href="https://www.youtube.com/channel/UCNvoC-mVPetXi6-AQAcFXEQ/videos" class="text-white"><i class="bi bi-youtube"></i></a>
+            </div>
+        </div>
+    </div>
+</footer>
+  
+
+ 
+    
+
+    <!-- Link necesario para poder usar boostrap-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+</body>
+</html>
+
+<!--
+<div class="container-fluid">
+  <div class="row">
+      <div class="col-md-6 col-lg-3 text-center">
+        <img src="./imagenes/gym1.png" Style="width: 20%;">
+          <h4>Sala Fitnes</h4>
+          <p>contamos con una sala de fitness equipada con la última tecnología (Technogym).</p>
+      </div>
+      <div class="col-md-6 col-lg-3 text-center">
+        <img src="./imagenes/gym3.png" Style="width: 20%;">
+          <h4>Pistas</h4>
+          <p>donde practicar deportes de equipo (futbol sala, baloncesto, balón mano etc..)</p>
+      </div>
+      <div class="col-md-6 col-lg-3 text-center">
+        <img src="./imagenes/descarga.png" Style="width: 20%;">
+          <h4>Ciclo Indor</h4>
+          <p>Donde puedes prácticar Spining de alto nivel, con técnicos altamente cualificados</p>
+      </div>
+      <div class="col-md-6 col-lg-3 text-center">
+        <img src="./imagenes/gym4.png" Style="width: 20%;">
+          <h4>Salas Polivalentes</h4>
+          <p>Donde puedes prácticar Body Pump, Yoga, Baile para la tercera edad</p>
+      </div>
+  </div>
+</div>
+  -->
