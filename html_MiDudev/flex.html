@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FLEX</title>
+
+<style>
+    body {
+
+    }
+
+    .parent {
+        display: flex;
+        flex-direction: flex; /*esta es por defecto*/
+        
+    }
+
+    .item {
+        border: 1px solid;
+        opacity: .9;
+        width: 100px;
+        height: 100px;
+        background: #09f;
+
+    }
+
+    .item:first-child {
+        background: yellow;
+    }
+
+    .item:last-child {
+        background: red;
+    }
+</style>
+
+</head>
+<body>
+<p>Flex solo trabaja en filas o columnas, en cambio grid trabaja con un eje o con dos a la vez, para hacer</p>
+    <section class="parent">
+        <div class="item">
+            1
+        </div>
+        <div class="item">
+            2
+        </div>
+        <div class="item">
+            3
+        </div>
+    </section>
+</body>
+</html>

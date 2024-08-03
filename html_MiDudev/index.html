@@ -1,0 +1,413 @@
+<!--Para poder buscar información de cualquier etiqueta o css puedes buscarlo en mdn-->
+<!--codi.link es una página para poder hacer pruebas de forma rápida-->
+
+
+<!--
+
+<span> es en linea
+
+<div>es en bloque
+
+
+
+
+
+-->
+
+<!DOCTYPE html>
+
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width">
+        <title>Porfolio Antonio</title>
+
+        <meta name="viewport" content="width=device-width">
+
+        <!--OPEN GRAPH-->
+        <meta property="og:title" content="Porfolio de un programador">
+        <meta property="og:description" content="Porfolio de un programador">
+
+        <meta name="robots" content="index, follow">
+        <meta name="theme-color" content="#09f">
+
+        <link rel="icon" href="/imagenes/yo.jpg">
+
+        <style>
+            h1 {
+                color:blue; /*declaración*/
+                /*color: rgba(0, 0, 0 50%);* el 50 da opacidad/
+                /*color: rgb(0 0 0 / 50%) este da opcacidad y es más moderno*/
+                /*color: hsl(60, 100%, 100%)*/
+                /*color: oklch(348 83% 44% / 50%)*/
+                /*color: #09f; en realidad es #0099ff*/
+                border-width: 3px;
+                border-style: solid;
+                border-color: black;
+            }
+
+            body {
+                background: #f1d8dc;
+                font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; /*te sale mas de una fuente por si falla alguna en el navegador, lo ponemos en el body para que todo sea con la misma letra*/
+            }
+            
+            .link {
+                color: red;
+            }
+
+            .link:hover { /*seudo-clase*/
+                color: yellow;
+                outline: 3px solid red; /*es mejor que el border porque no cambia el tamaño del texto*/
+            }
+
+            .link:active { /*es para cuando se hace click*/
+                outline: 3px solid rgb(27, 152, 56);
+            }
+
+            #experiencia {
+                background-color: blueviolet;
+                border: 0;
+                color: white;
+            }
+
+            .description {
+                border: 1px solid red;
+                
+            }
+
+            li:first-child {
+                color: rgb(233, 133, 150);
+            }
+
+            li:last-child {
+                color: brown;
+            }
+
+            .container {
+                width: 100px;
+                height: 100px;
+                background-color: blue;
+                padding: 16px; /*le estas diciendo que a los cutro lados tiene 16 de espacio*/
+                border:10px solid red; 
+                margin: 10px;
+                /*aqui el tamaño de la caja es la suma de el width el height el pading y el border*/
+                box-sizing: border-box; /*con esto lo que hacemos es que se autoajuste al tamaño del weight y el height... el content-box seria el que esta por defecto y seria la suma de todos, como explique anteriormente*/
+            
+            }
+
+        </style>
+    </head>
+<body>
+<!--Si quieres ver el significado de alguna etiqueta puedes mirarlo en "mdn h1 html" por ejemplo-->
+<header>
+<h1>Porfolio de Antonio</h1>
+
+<nav>
+    <a class="link" href="#experiencia">Experiencia</a>
+    <a href="#proyectos">Proyectos</a>
+    <a 
+        href="https://marca.com" 
+        target="_bank"
+        rel="noreferrer"
+        >Marca
+        
+    </a>
+</nav>
+</header>
+
+<video src="https://www.youtube.com/watch?v=3nYLTiY5skU" type="video/mp4"></video>
+<iframe src="https://www.youtube.com/embed/3nYLTiY5skU"></iframe>
+<main>
+
+<p class="description">No tengo mucha experiencia como <strong>Programador</strong> pero tengo 
+    muchas gnas de aprender</p>
+
+<h2 id="experiencia">Experiencia</h2>
+
+<div class="container">
+hola
+</div>
+
+<ul>
+    <li class="list-item">Integrat - 2024</li>
+    <li class="list-item">Taller de mecánica - 2017</li>
+</ul>
+<!--"hidden" es un atributo que Oculta el elemento en este caso la imagen-->
+<img src="/imagenes/yo.png" alt="Antonio's photo">
+
+<aside>
+<h2 id="proyectos">Proyectos realizdos</h2>
+
+<header>
+    <h3>Mis tecnoliogias favoritas</h3>
+</header>
+<ol>
+    <li>HTML</li>
+    <li>CSS</li>
+    <li>Java</li>
+    <li>JavaScript</li>
+</ol>
+</aside>
+
+<section>
+    <article>
+        <header>
+            <h4>Sitio Web Corporativo</h4>
+        </header>
+        <p>Desarrollo de un sitio web corporativo con una interfaz amigable y moderna</p>
+    <footer>Tecnologias utilizadas: HTML, CSS, JavaScript</footer>
+    </article>
+    <article>
+        <header>
+            <h4>Sitio Web Corporativo</h4>
+        </header>
+        <p>Desarrollo de un sitio web corporativo con una interfaz amigable y moderna</p>
+    <footer>Tecnologias utilizadas: HTML, CSS, JavaScript</footer>
+    </article>
+    <article>
+        <header>
+            <h4>Sitio Web Corporativo</h4>
+        </header>
+        <p>Desarrollo de un sitio web corporativo con una interfaz amigable y moderna</p>
+    <footer>Tecnologias utilizadas: HTML, CSS, JavaScript</footer>
+    </article>
+
+</section>
+
+<section>
+    <h2>Preguntas frecuentes</h2>
+    <details>
+        <summary>¿Que estudios tienes?</summary>
+        <p>Tengo un grado superior de Informática</p>
+    </details>
+    <details open>
+        <summary>¿Que edad tienes?</summary>
+        <p>Tengo 35 años, estoy hecho un chaval</p>
+    </details>
+</section>
+</main>
+
+<section>
+    <h2>Formulario</h2>
+
+    <form method="post" action="/">
+        <fieldset>
+            <legend>Informacion personal</legend>
+            
+            <div>
+            <label>Nombre:
+            <input type="text" id="name" name="name" placeholder="Antonio Esteban" required>
+            </label>
+            </div>
+            <label>Email:
+                <input type="email" id="email" name="email" placeholder="Antonio@gmail.com" required>
+            </label>
+
+        </fieldset>
+
+        <fieldset>
+            <legend>Informacion adicional</legend>
+            
+            <div>
+            <label>Telefono:
+            <input type="tel" id="telf" name="telf" placeholder="961251992" required requiered pattern="[0-9]">
+            </label>
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>Otros</legend>
+            
+            <div>
+            <label for="why">¿Por que quieres contactar?</label>
+            <select name="why" id="why">
+                <option value="1">Trabajo</option>
+                <option value="2">Duda</option>
+                <option value="3">Ma información</option>
+            </select>
+            </div>
+
+            <div>
+                <label for="terms">¿Aceptas los terminos?</label>
+                <input type="checkbox" id="terminos" required>
+            </div>
+            <div>
+                <datalist id="languages">
+                    <option value="JavaScript"></option>
+                    <option value="C+"></option>
+                    <option value="Python"></option>
+                </datalist>
+                <label>¿Con que lenguaje te puedo ayudar?</label>
+                <input list="languages" name="languages">
+            </div>
+        </fieldset>
+
+        <input type="submit" value="Enviar">
+    </form>
+</section>
+<footer> 
+    Copyright @ 2024 - El mejor porfolio
+</footer>
+
+
+
+<h1>CSS PARTE 3 OVERFLOW (desvordamiento)</h1>
+<p>El desbordamiento se produce cuando el el tamaño de tu caja es mas pequeña que un texto por ejemplo--</p>
+
+<style>
+    /*al poner un texto mas grande que el tmaño de la caja se sale*/
+    .container2 {
+        width: 150px;
+        height: 150px;
+        background-color: azure;
+        padding: 10px;
+        box-sizing: border-box;
+        font-size: 48px;
+        margin-bottom: 305px;
+        overflow: visible; 
+    }
+
+    /*aqui lo que haces es meterle un scroll y te salen barras para desplazarte*/
+    .container3 {
+        width: 150px;
+        height: 150px;
+        background-color: azure;
+        padding: 10px;
+        box-sizing: border-box;
+        font-size: 48px;
+        overflow: scroll;
+    }
+
+    /*con el hidden solo se veria lo que cbe dentro de la caja y no se veria todo el contenido*/
+    .container4 {
+        width: 150px;
+        height: 150px;
+        background-color: azure;
+        padding: 10px;
+        box-sizing: border-box;
+        font-size: 48px;
+        overflow:hidden;
+    }
+    /*si vas a utilizar scroll seria conveniente a usar overflow: auto;*/
+</style>
+<h3>Sin OVERFLOW</h3>
+<section class="container2"> CSS IS AWESOME, HOLA ESTO ES UNA PRUEBA</section>
+<h3>CON SCROLL</h3>
+<section class="container3"> CSS IS AWESOME, HOLA ESTO ES UNA PRUEBA</section>
+<h3>CON HIDDEN</h3>
+<section class="container4"> CSS IS AWESOME, HOLA ESTO ES UNA PRUEBA</section>
+
+
+<h1>CSS PARTE 3 - POSITION </h1>
+
+<style>
+    /*con el position ABSOLUT la caja azul se va arriba del todo del documento poniendo el top: o;*/
+    .container5 {
+        width: 100px;
+        height: 100px;
+        background-color: rgb(22, 221, 221);
+        position: absolute; /*podemos determinar las cordenadas en el documento, y tu lo quieres respecto el section*/
+        top:0;
+        right: 10px; 
+    
+    }
+
+    .sec {
+        border: 5px solid #0b0b0b;
+        width: 250px;
+        height: 250px;
+        box-sizing: border-box; /*nos aseguramos que el tamaño es de 250px*/
+    }
+
+    /*con el position RELATIVE la caja azul se va arriba del todo del section poniendo el top: o;*/
+    .container6 {
+        width: 100px;
+        height: 100px;
+        background-color: rgb(22, 221, 221);
+        top:0;
+        right: 0; 
+    
+    }
+
+    .sec1 {
+        border: 5px solid #0b0b0b;
+        width: 250px;
+        height: 250px;
+        box-sizing: border-box; /*nos aseguramos que el tamaño es de 250px*/
+        position: relative; /*donde pones el relative es donde se marca por referencia luego las posiciones*/
+    }
+
+    /*con el position FIXED la caja se quedara fija donde le digamos mientras hagamos scroll en la página, no afecta el relative*/
+    .container7 {
+        width: 120px;
+        height: 25px;
+        background-color: rgb(186, 165, 47);
+        position: fixed; /*son las cordenadas de la pantalla, se ponen con el top y ...*/
+        top:0;
+        left: 0; 
+    
+    }
+
+    .sec2 {
+        border: 5px solid #0b0b0b;
+        width: 250px;
+        height: 250px;
+        box-sizing: border-box; /*nos aseguramos que el tamaño es de 250px*/
+        
+    }
+
+    /*con el position Sticky se puede quedar pegado si quieres en la caja del section, ya que si que le afecta el relative*/
+    .container8 {
+        width: 120px;
+        height: 25px;
+        background-color: rgb(47, 100, 186);
+        position: sticky; /*son las cordenadas de la pantalla, se ponen con el top y ...*/
+        top:0;
+        right: 0; 
+    
+    }
+
+    .sec3 {
+        border: 5px solid #0b0b0b;
+        width: 250px;
+        height: 250px;
+        box-sizing: border-box; /*nos aseguramos que el tamaño es de 250px*/
+        
+    }
+
+</style>
+
+<h3>POSITION ABSOLUTE</h3>
+<section class="sec">
+    <div class="container5">
+        container posicion absolut
+    </div>
+</section>
+
+<h3>POSITION STICKY</h3>
+<section class="sec3">
+    <div class="container8">
+        container Stiky
+    </div>
+</section>
+
+<h3>POSITION RELATIVE</h3>
+<section class="sec1">
+    <div class="container6">
+        container relative
+    </div>
+</section>
+
+<h3>POSITION FIXED</h3>
+<section class="sec2">
+    <div class="container7">
+        container fixed
+    </div>
+</section>
+
+<h1>CSS PARTE 3 - z-index </h1>
+<p>Cuando esta pasando algo por encima de otra cosa, como cuando hacemos un position fixed que pasa una caja por encima de otros elementos, el z-index es un indeci z que lo que hace es que pueda pasar sin problemas x encima de todo si mezclarse</p>
+
+
+</body>
+</html>

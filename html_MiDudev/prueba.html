@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PRUEBA</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;   
+        }
+
+        body {
+            background-color: rgb(204, 204, 226);
+        }
+        
+        .nav-bar {
+            background-color: #ececec;
+            margin: 0;
+            display: flex;
+            justify-content: flex-end;
+
+            
+        }
+
+        .menu {
+            margin-right: 20px;
+            margin-top: 25px;
+        }
+
+        .logo {
+            width: 75px;
+            
+            margin-right: auto;
+        }
+
+        .sec1 {
+            display: flex;
+            justify-content: center;
+            margin-top: 130px;
+            align-items: center;
+            flex-wrap: wrap; /*esto hace que cuando se minimize la pantalla los objetos se bajen uno debajo de otro, se apilan*/
+        }
+
+        .mi_foto {
+            width: 470px;
+            border-radius: 100%;
+            border: 1px solid #131313;
+        }
+
+        .mi_porfo {
+            font-size: 50px;
+            margin-right: 5%;
+            color: rgb(255, 255, 255);
+            font-weight: 600;
+            font-style: oblique;
+            font-family:Georgia, 'Times New Roman', Times, serif
+
+        }
+
+        
+
+        .descarga:hover {
+            background-color: rgb(154, 139, 165);
+        }
+
+        .sec2 {
+            background-color: rgb(180, 126, 169);
+            margin-top: 20%;
+            padding-top: 4%;
+            padding-bottom: 4%;
+            
+        }
+
+        h2 {
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            font-weight: 800;
+            font-style: italic;
+            font-size: 28px;
+            padding-bottom: 1%;
+            padding-left: 5%;
+        
+        }
+
+        .p1 {
+            padding-left: 5%;
+        }
+
+        .lenguajes {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap:30px;
+            padding-top: 2%;
+            
+
+        }
+
+        .len {
+            text-align:center;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            font-size: 20px;
+            border: .1rem solid #000;
+            width: 300px;
+            height: 300px;
+            background-color: rgb(212, 177, 205);
+            
+
+
+        }
+         
+
+        .sec3 {
+            margin-top: 10%;
+            background-color: rgb(180, 126, 169);
+            padding-top: 4%;
+            padding-bottom: 4%;
+
+        }
+
+
+        .imagen_exp {
+            width: 200px;
+            padding-top: 4%;
+            
+        }
+
+
+
+
+        
+
+    </style>
+</head>
+<body>
+    
+    <header>
+        <nav class="nav-bar">
+            <img class="logo" src="./logoAntonio3.png" alt="logo">
+            <span class="menu">HOME</span>
+            <span class="menu">ESTUDIOS</span>
+            <span class="menu">EXPERIENCIA</span>
+            <span class="menu">CONTACTO</span>
+        </nav>
+    </header>
+
+    <main>
+        <section class="sec1">
+            <h1 class="mi_porfo">Soy Antonio Esteban <br> Programador web </h1>
+            <img class="mi_foto" src="./yo.jpg" alt="mi foto">
+        </section>
+
+        
+
+        <section class="sec2">
+            <h2>EXPERIENCIA</h2>
+            <div class="exp1">
+                <p class="p1">Técnico de Grado Superior de Informática DAW</p>
+            </div>
+        </section>
+
+        <section class="sec3">
+            <h2>LENGUAJES</h2>
+            <div class="lenguajes">
+                <div class="len">
+                    <h3>CSS</h3>
+                    <p class="p1">Lenguaje de CSS</p>
+                    <img class="imagen_exp" src="./css2.png" alt="imagen_css">
+                </div>
+                
+                <div class="len">
+                    <h3>HTML</h3>
+                    <p class="p1">Lenguaje de Html</p>
+                    <img class="imagen_exp" src="./html2.png" alt="imagen_html">
+                </div>
+
+                
+                <div class="len">
+                    <h3>JAVA</h3>
+                    <p class="p1">Lenguaje de Java</p>
+                    <img class="imagen_exp" src="./java2.png" alt="imagen_java">
+                </div>
+            </div>
+        </section>
+    </main>
+
+</body>
+</html>
+
+
+<!--
+<span class="boton1">
+    <button class="descarga">Descarga CV</button>
+</span>
+
+.boton1 {
+            margin-left: 30%;
+            border:rgb(80, 32, 124);
+            
+        }
+
+        .descarga {
+            font-size: 20px;
+            color: rgb(80, 32, 124);
+            padding: 1%;
+            font-weight: 600;
+            background-color: rgb(184, 134, 230);
+            border-radius: 5%;
+        }
+
+
+-->
